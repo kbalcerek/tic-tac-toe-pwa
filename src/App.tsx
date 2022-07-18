@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { version } from "./version";
 import './App.css';
 
 const initialCleanBoard: string[] = ['', '', '', '', '', '', '', '', ''];
@@ -53,6 +54,7 @@ function App() {
       {winner !== '' && (<p id="message">Winner is {winner}</p>)}
       
       <button id="restartGame" onClick={startGame}>Restart Game</button>
+      <div className="version">build time: {version.number}</div>
     </div>
   );
 }
